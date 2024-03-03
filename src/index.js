@@ -1,6 +1,11 @@
 import _ from "lodash";
 import "./style.css";
-import header from "./components/header";
-import content from "./components/content";
-document.body.appendChild(header());
-document.body.appendChild(content());
+import landing from "./components/landing-page.module";
+import menu from "./components/menu";
+
+document.body.appendChild(landing());
+
+const homeBtn = document.querySelector("home-btn");
+const menuBtn = document.querySelector("menu-btn");
+homeBtn.addEventListener("click", landing);
+menuBtn.addEventListener("click", menu);
